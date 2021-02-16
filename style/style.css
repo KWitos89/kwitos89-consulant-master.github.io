@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@300;500;600&display=swap");
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--fontcolor);
+}
+
+li {
+  list-style-type: none;
+}
+
+/*variables*/
+:root {
+  --bgcolor:rgba(24, 23, 25, 1);
+  --fontcolor:#f2f2f2;
+}
+
+/*fonts*/
+.nav_bar P {
+  font-family: 'Crimson pro',sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.nav_bar .menu {
+  font-family: 'Montserrat',sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.left_page h1 {
+  font-family: 'Lora',sans-serif;
+  font-weight: 400;
+}
+
+.left_page p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+.left_page .read_more {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.right_page h2, .right_page h4 {
+  font-family: 'Montserrat',sans-serif;
+  font-family: 500;
+}
+
+.right_page h3 {
+  font-family: 'Lora',sans-serif;
+  font-weight: 700;
+}
+
+footer {
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 17px;
+  color: darkgray;
+}
+
+/*base styles*/
+body {
+  background: var(--bgcolor);
+  color: var(--fontcolor);
+  height: 100vw;
+}
+
+.nav_bar .logo_nav {
+  border: 1px solid #f2f2f2;
+  width: 103px;
+  height: 32px;
+  padding: 8px;
+  text-align: center;
+}
+
+/*mobile styles*/
+nav .nav_bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .nav_bar .logo_nav {
+  margin-left: 19px;
+  margin-top: 12px;
+}
+
+nav .nav_bar .menu_hamburger {
+  position: relative;
+  padding: 30px;
+  background: transparent;
+  border: 0;
+  -webkit-transition: -webkit-transform .3s .1s ease-in-out;
+  transition: -webkit-transform .3s .1s ease-in-out;
+  transition: transform .3s .1s ease-in-out;
+  transition: transform .3s .1s ease-in-out, -webkit-transform .3s .1s ease-in-out;
+  cursor: pointer;
+}
+
+nav .nav_bar .menu_hamburger .box_hamburger {
+  position: relative;
+  -webkit-transform: translateY(-18px);
+          transform: translateY(-18px);
+  width: 40px;
+  height: 40px;
+}
+
+nav .nav_bar .menu_hamburger .box_hamburger .inner_hamburger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -130%);
+          transform: translate(-50%, -130%);
+  width: 100%;
+  height: 3px;
+  background: antiquewhite;
+}
+
+nav .nav_bar .menu_hamburger .box_hamburger .inner_hamburger::after,
+nav .nav_bar .menu_hamburger .box_hamburger .inner_hamburger::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: antiquewhite;
+  top: 0;
+  left: 0;
+  -webkit-transition: -webkit-transform .2s .2s ease-in-out;
+  transition: -webkit-transform .2s .2s ease-in-out;
+  transition: transform .2s .2s ease-in-out;
+  transition: transform .2s .2s ease-in-out, -webkit-transform .2s .2s ease-in-out;
+}
+
+nav .nav_bar .menu_hamburger .box_hamburger .inner_hamburger::after {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+nav .nav_bar .menu_hamburger .box_hamburger .inner_hamburger::before {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+nav .nav_bar .menu_hamburger .box_hamburger .menu_hamburger:active .inner_hamburger {
+  background-color: transparent;
+}
+
+nav .nav_bar .menu_hamburger .box_hamburger .menu_hamburger:active .inner_hamburger:before {
+  -webkit-transform: translateY(10px) rotate(45deg);
+          transform: translateY(10px) rotate(45deg);
+}
+
+nav .nav_bar .menu_hamburger .box_hamburger .menu_hamburger:active .inner_hamburger:after {
+  -webkit-transform: translateY(-10px) rotate(-45deg);
+          transform: translateY(-10px) rotate(-45deg);
+}
+
+nav .nav_bar .menu {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  right: 0;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  background: var(--bgcolor);
+}
+
+nav .nav_bar .menu li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+  border: .15px solid #f00;
+  width: 200px;
+  height: 50px;
+  border-radius: 15px;
+  background: rgba(169, 169, 169, 0.01);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+nav .nav_bar .menu li:hover {
+  letter-spacing: 3px;
+}
+
+nav .nav_bar .menu li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150px;
+  width: 50%;
+  height: 100%;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(255, 0, 0, 0.15)), to(transparent));
+  background: linear-gradient(to left, rgba(255, 0, 0, 0.15), transparent);
+  -webkit-transform: skewX(45deg) translateX(0);
+          transform: skewX(45deg) translateX(0);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+nav .nav_bar .menu li:hover::before {
+  -webkit-transform: skewX(45deg) translateX(300%);
+          transform: skewX(45deg) translateX(300%);
+}
+
+nav .nav_bar .menu li::after {
+  content: '';
+  position: absolute;
+  left: 40%;
+  bottom: -5px;
+  width: 40px;
+  height: 10px;
+  background: #f00;
+  border-radius: 10px;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section .left_page {
+  margin-top: 38px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+section .left_page h1 {
+  margin-bottom: 25px;
+}
+
+section .left_page p {
+  margin-bottom: 25px;
+}
+
+section .left_page .read_more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section .left_page .read_more .arrow {
+  margin-left: 12px;
+}
+
+section .right_page {
+  margin-top: 37px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+section .right_page .boximg {
+  width: 351px;
+  height: 264px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+section .right_page .boximg .bg_img {
+  height: 100%;
+}
+
+section .right_page .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  height: 138px;
+  border-radius: 12px;
+  background: rgba(24, 23, 25, 0.15);
+  z-index: 2;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  -webkit-transform: translate(40px, -50px);
+          transform: translate(40px, -50px);
+  padding-left: 12px;
+  padding-top: 12px;
+}
+
+section .right_page .card .person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .right_page .card .person h2, section .right_page .card .person h4 {
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+
+section .right_page .card .person h3 {
+  -webkit-transform: translate(-30px, -150px);
+          transform: translate(-30px, -150px);
+}
+
+section .right_page .card .img_box {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+section .right_page .card .img_box .person_img {
+  -webkit-transform: translateX(-15px);
+          transform: translateX(-15px);
+  height: 100%;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 25px;
+  padding-top: 60px;
+}
+
+/*small tablet styles*/
+/*large tablets & laptop styles*/
+/*desktop styles*/
+/*# sourceMappingURL=style.css.map */
