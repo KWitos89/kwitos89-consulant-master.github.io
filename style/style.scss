@@ -144,7 +144,9 @@ nav{
                 justify-content: center;
                 align-items: center;
                 cursor: pointer;         
-                transform: translateY(100%);
+                clip-path: circle(100px at 90% -20%);
+                -webkit-clip-path:circle(100px at 90% -20%);
+                transition: all 1s ease-out;
                 
                 li{
 
@@ -158,6 +160,12 @@ nav{
                 }
 
                
+            }
+
+            .link_nav.open{
+
+                clip-path: circle(1000px at 90% -20%);
+                -webkit-clip-path:circle(1000px at 90% -20%);
             }
        }
 

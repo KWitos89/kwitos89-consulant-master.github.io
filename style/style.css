@@ -127,8 +127,10 @@ nav .nav_bar .menu .link_nav {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  clip-path: circle(100px at 90% -20%);
+  -webkit-clip-path: circle(100px at 90% -20%);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
 }
 
 nav .nav_bar .menu .link_nav li {
@@ -139,6 +141,11 @@ nav .nav_bar .menu .link_nav a:hover {
   color: #f00;
   letter-spacing: 5px;
   zoom: 2;
+}
+
+nav .nav_bar .menu .link_nav.open {
+  clip-path: circle(1000px at 90% -20%);
+  -webkit-clip-path: circle(1000px at 90% -20%);
 }
 
 nav .nav_bar .menu_hamburger {
