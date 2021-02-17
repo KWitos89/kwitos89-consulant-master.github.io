@@ -96,11 +96,12 @@ body{
     background: var(--bgcolor);
     color: var(--fontcolor);
     height: 100vw;
-   
-
+  
 }
 
 .nav_bar{
+
+    
     .logo_nav{
         border: 1px solid #f2f2f2;
         width: 103px;
@@ -115,29 +116,64 @@ body{
 
 nav{
     
-    
+
     .nav_bar{
-     
+        position: relative; 
         display: flex;
         justify-content: space-between;
-        
+        height: auto;
         .logo_nav{
 
             margin-left: 19px;
             margin-top: 12px;
         }
 
-     
+       .menu{
+
+            .link_nav{
+
+                position:fixed;
+                height: 100vh;
+                background:rgba(169, 169, 169, .15);
+                backdrop-filter: blur(10px);
+                width: 100%;
+                left: 0;
+                z-index: 3;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;         
+                transform: translateY(100%); 
+                
+                li{
+
+                   margin-bottom: 60px;
+                }
+
+                a:hover{
+                    color: #f00;
+                    letter-spacing: 5px;
+                    zoom: 2;
+                }
+
+               
+            }
+       }
+
+
+        
 
         .menu_hamburger{
 
-          
-            position: relative;
+            right: 0;
+            position: fixed;
             padding: 30px;
             background: transparent;
             border: 0;
             cursor: pointer;
-            z-index: 2;
+            z-index: 3;
+            transform: translateX(20px);
             
             
             .box_hamburger{
@@ -209,71 +245,6 @@ nav{
         }
 
         .menu{
-            position:absolute;
-            display:flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100vw;
-            height: 100vh;
-            background:rgba(169, 169, 169, .15);
-            backdrop-filter: blur(10px);
-            z-index: 3;
-          
-        
-           
-            li{
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin-bottom: 30px;
-                border: .15px solid #f00;
-                width: 200px;
-                height: 50px;
-                border-radius: 15px;
-                background:rgba(169, 169, 169, .01);
-                backdrop-filter: blur(10px);
-                overflow: hidden;
-            
-            }
-
-            li:hover{
-
-                letter-spacing: 3px;
-            }
-
-            li::before{
-
-                content: '';
-                position: absolute;
-                top:0;
-                left: -150px;
-                width: 50%;
-                height: 100%;
-                background: linear-gradient(to left,rgba(255,0,0,.15),transparent);
-                transform: skewX(45deg) translateX(0);
-                transition: .5s;
-            }
-
-            li:hover::before{
-
-                transform: skewX(45deg) translateX(300%);
-            }
-
-            li::after{
-
-                content: '';
-                position: absolute;
-                left: 40%;
-                bottom: -5px;
-                width: 40px;
-                height: 10px;
-                background: #f00;
-                border-radius: 10px;
-                
-            }
 
         }
     }
