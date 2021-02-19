@@ -129,18 +129,12 @@ nav .nav_bar .menu .link_nav {
   cursor: pointer;
   clip-path: circle(100px at 90% -20%);
   -webkit-clip-path: circle(100px at 90% -20%);
-  -webkit-transition: all 1s ease-out;
-  transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 nav .nav_bar .menu .link_nav li {
   margin-bottom: 60px;
-}
-
-nav .nav_bar .menu .link_nav a:hover {
-  color: #f00;
-  letter-spacing: 5px;
-  zoom: 2;
 }
 
 nav .nav_bar .menu .link_nav.open {
@@ -206,18 +200,16 @@ nav .nav_bar .menu_hamburger .box_hamburger .inner_hamburger::before {
           transform: translateY(10px);
 }
 
-nav .nav_bar .menu_hamburger:active .inner_hamburger {
+nav .nav_bar .menu_hamburger-active .inner_hamburger {
   background: transparent;
-  -webkit-transition: 1ms ease-in-out;
-  transition: 1ms ease-in-out;
 }
 
-nav .nav_bar .menu_hamburger:active .inner_hamburger::after {
+nav .nav_bar .menu_hamburger-active .inner_hamburger::after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-nav .nav_bar .menu_hamburger:active .inner_hamburger::before {
+nav .nav_bar .menu_hamburger-active .inner_hamburger::before {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }

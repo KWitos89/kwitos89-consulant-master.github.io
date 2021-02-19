@@ -146,20 +146,13 @@ nav{
                 cursor: pointer;         
                 clip-path: circle(100px at 90% -20%);
                 -webkit-clip-path:circle(100px at 90% -20%);
-                transition: all 1s ease-out;
+                transition: all 1s ease-in-out;
                 
                 li{
 
                    margin-bottom: 60px;
                 }
-
-                a:hover{
-                    color: #f00;
-                    letter-spacing: 5px;
-                    zoom: 2;
-                }
-
-               
+ 
             }
 
             .link_nav.open{
@@ -227,34 +220,30 @@ nav{
                     transform: translateY(10px);
                 }
 
-                
 
             }
 
-        
 
         }
-        
+
         /*animation*/
-        .menu_hamburger:active .inner_hamburger{
+        .menu_hamburger-active .inner_hamburger{
 
             background: transparent;
-            transition: 1ms ease-in-out;
         }
 
-        .menu_hamburger:active .inner_hamburger::after{
+        .menu_hamburger-active .inner_hamburger::after{
 
             transform: rotate(45deg);
+            
         }
 
-        .menu_hamburger:active .inner_hamburger::before{
+        .menu_hamburger-active .inner_hamburger::before{
 
             transform: rotate(-45deg);
         }
 
-        .menu{
-
-        }
+        
     }
 }
 
