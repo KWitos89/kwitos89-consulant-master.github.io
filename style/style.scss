@@ -226,26 +226,28 @@ nav{
 
         }
 
-        /*animation*/
-        .menu_hamburger-active .inner_hamburger{
+        
+        
+    }
+}
+
+/*animation*/
+        .inner_hamburger.close{
 
             background: transparent;
         }
 
-        .menu_hamburger-active .inner_hamburger::after{
+        .inner_hamburger.close::after{
 
             transform: rotate(45deg);
             
         }
 
-        .menu_hamburger-active .inner_hamburger::before{
+        .inner_hamburger.close::before{
 
             transform: rotate(-45deg);
         }
 
-        
-    }
-}
 
 section{
 
@@ -350,21 +352,6 @@ section{
     }
 }
 
-/*animation*/
-
-
-
-    .menu_hamburger:active .inner_hamburger{
-
-        background: transparent;
-        transition: .1s ease-in-out;
-    }
-
-    .menu_hamburger:active .inner_hamburger::after{
-
-        transform: skew(45deg);
-        
-    }
 
 footer{
 

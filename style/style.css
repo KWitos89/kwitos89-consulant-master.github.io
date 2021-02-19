@@ -96,7 +96,6 @@ nav .nav_bar {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: auto;
-  /*animation*/
 }
 
 nav .nav_bar .logo_nav {
@@ -200,16 +199,17 @@ nav .nav_bar .menu_hamburger .box_hamburger .inner_hamburger::before {
           transform: translateY(10px);
 }
 
-nav .nav_bar .menu_hamburger-active .inner_hamburger {
+/*animation*/
+.inner_hamburger.close {
   background: transparent;
 }
 
-nav .nav_bar .menu_hamburger-active .inner_hamburger::after {
+.inner_hamburger.close::after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-nav .nav_bar .menu_hamburger-active .inner_hamburger::before {
+.inner_hamburger.close::before {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
@@ -324,18 +324,6 @@ section .right_page .card .img_box .person_img {
   -webkit-transform: translateX(-15px);
           transform: translateX(-15px);
   height: 100%;
-}
-
-/*animation*/
-.menu_hamburger:active .inner_hamburger {
-  background: transparent;
-  -webkit-transition: .1s ease-in-out;
-  transition: .1s ease-in-out;
-}
-
-.menu_hamburger:active .inner_hamburger::after {
-  -webkit-transform: skew(45deg);
-          transform: skew(45deg);
 }
 
 footer {
