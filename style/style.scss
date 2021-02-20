@@ -128,13 +128,13 @@ nav{
             margin-top: 12px;
         }
 
-       .menu{
-
+       
+        
             .link_nav{
 
                 position:fixed;
                 height: 100vh;
-                background:rgba(169, 169, 169, .15);
+                background:rgba(24, 23, 25, .9);
                 backdrop-filter: blur(10px);
                 width: 100%;
                 left: 0;
@@ -144,23 +144,47 @@ nav{
                 justify-content: center;
                 align-items: center;
                 cursor: pointer;         
-                clip-path: circle(100px at 90% -20%);
-                -webkit-clip-path:circle(100px at 90% -20%);
+                clip-path: circle(0% );
+                -webkit-clip-path:circle(0%);
                 transition: all 1s ease-in-out;
                 
                 li{
-
+                    position: relative;
                    margin-bottom: 60px;
                 }
+
+                li::after{
+                    content: '';
+                    position:absolute;
+                    width: 0;
+                    height: 3px;
+                    background:linear-gradient(to left top,transparent,#f00 );
+                    right: 0;
+                    top: 100%;
+                    transition: width .3s linear;
+
+                }
+
+                li:hover::after{
+                    
+                    width: 100%;
+                }
+
+                a:hover{
+                    font-weight: bold;
+                    color: red;
+                    transition:color .5s linear;
+                }
+                
  
             }
 
             .link_nav.open{
 
-                clip-path: circle(1000px at 90% -20%);
-                -webkit-clip-path:circle(1000px at 90% -20%);
+                clip-path: circle(100%);
+                -webkit-clip-path:circle(100%);
             }
-       }
+       
 
 
         
@@ -232,18 +256,18 @@ nav{
 }
 
 /*animation*/
-        .inner_hamburger.close{
+        .inner_hamburger.open{
 
             background: transparent;
         }
 
-        .inner_hamburger.close::after{
+        .inner_hamburger.open::after{
 
             transform: rotate(45deg);
             
         }
 
-        .inner_hamburger.close::before{
+        .inner_hamburger.open::before{
 
             transform: rotate(-45deg);
         }
@@ -360,22 +384,201 @@ footer{
     align-items: center;
     padding-bottom: 25px;
     padding-top: 60px;
+    
 }
+
 
 /*small tablet styles*/
-
-@media screen and(min-width:620px){
+@media screen and (min-width:401px) and (max-width:500px){
     
+    .right_page{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
+      .card{
+       
+        margin-right: 60px;
+        
+      }
+    }
 }
+@media screen and (min-width:501px) and (max-width:620px){
+    section{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 100px;
 
-/*large tablets & laptop styles*/
-@media screen and(min-width:960px)
-{
+        .right_page{
+            
+            transform: translateY(60px);
+            
+        }
+
+    }
+
    
 }
 
-/*desktop styles*/
-@media screen and(min-width:1200px){
+/*large tablets & laptop styles*/
+@media screen and (min-width:621px){
 
+    .menu_hamburger{
+        display: none;
+    }
+    
+    .nav_bar{
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      
+    }
+    .menu{
+        margin-top: 20px;
+    }
+
+    .logo_nav{
+        transform: translateY(-10px);
+    }
+    #link_nav-ds {
+
+        /*reset mobile styles*/
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        clip-path: unset;
+        -webkit-clip-path:unset;
+        transition: none;
+        background: var(--bgcolor);
+
+        display: grid;
+        grid-template-columns:repeat(4,auto);
+        transition: none;
+        height: 50px;
+        position: relative;
+        margin-right: 70px;
+        
+        
+        
+        li{
+            
+            margin-right: 30px;
+        }
+
+        li:last-child{
+            margin-right: 0;
+        }
+    }
+
+    section{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 100px;
+
+        .right_page{
+
+            transform: translateY(60px);
+
+        }
+
+        #boximg{
+            width: 400px;
+            height: 300px;
+
+            img{
+                height: 100%;
+            }
+        }
+
+       
+    }
+
+}
+
+/*desktop styles*/
+@media screen and (min-width:1200px){
+        
+    section{
+        display: grid;
+        grid-template-columns: auto auto;
+        padding-left: 70px;
+        margin-right: 77px;
+       
+
+        .left_page{
+
+            margin-right: 50px;
+            h1{
+                font-size: 60px;
+                font-weight: 500;
+                line-height: 61px;
+                white-space: nowrap;
+                
+            }
+            .read_more{
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 22px;
+                font-family: 'Montserrat', sans-serif;
+
+            }
+            p{
+                font-size: 35px;
+                font-weight: 400;
+                line-height: 50px;
+                font-family: 'Montserrat', sans-serif;
+                
+            }
+           
+
+
+
+        }
+
+        .right_page{
+
+            transform: translateY(60px);
+
+        }
+
+        #boximg{
+            width: 700px;
+            height: 500px;
+            margin-top: 100px;
+            
+
+            img{
+
+                height: 100%;
+                border-radius: 12px;
+            }
+
+
+        }
+        #card{
+            position: relative;
+            width: 400px;
+            height: 200px;
+            transform: translateY(-90px) translateX(240px);
+            
+            .person{
+                transform: translateY(-10px);
+
+                h3{
+                    font-size: 25px;
+                }
+            }
+        }
+       
+    }  
+    
+    footer{
+        margin-top: 300px;
+    }
 }

@@ -9,6 +9,7 @@ hamburger.addEventListener("click", () => {
     linkNav.classList.toggle("open");
     hamburger.classList.toggle("close");
 
+    console.log(this);
 });
 
 
