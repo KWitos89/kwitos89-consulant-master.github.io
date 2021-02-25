@@ -1,16 +1,13 @@
-const hamburger = document.querySelector('.menu_hamburger');
-const linkNav = document.querySelector('.link_nav');
-
-
-
-
+const hamburger = document.querySelector(".menu_hamburger");
+const linkNav = document.querySelector(".link_nav");
 
 hamburger.addEventListener("click", () => {
-    linkNav.classList.toggle("open");
-    hamburger.classList.toggle("close");
+    /*animation menu*/
+  linkNav.classList.toggle("open");
 
-    console.log(this);
+  /*animation hamburger*/
+  hamburger.classList.toggle("its-active");
+
 });
-
 
 
